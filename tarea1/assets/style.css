@@ -1,0 +1,127 @@
+.logo{
+  height:10vh;
+}
+.ml{
+  margin-left: auto;
+}
+.bg{
+  background-color:#071E22;
+}
+.nav-link{
+  color:#F8FFF4!important;
+}
+.boton{
+  text-align: center;
+    box-shadow:inset 0px 1px 0px 0px #276873;
+    background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+    background-color:#599bb3;
+    border-radius:6px;
+    border:1px solid #29668f;
+    display:inline-block;
+    cursor:pointer;
+    font-family:Arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #3d768a;
+}
+.boton:hover {
+  color: white;
+  background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+ 
+}
+.botn:active {
+  position:relative;
+  top:1px;
+}
+.contenido{
+  background-color: #A37B73
+}
+
+h1{display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  height: 15vh;
+  text-align: center;
+  background-color: #FAFAC6;
+}
+.maincategoria{
+  background-color: #F8FFF4;
+  display: flex;
+  justify-content:space-evenly;
+  flex-wrap: wrap;
+}
+.card-body{
+  text-align: center;
+}
+.card-img-top{
+padding: 1rem;
+}
+.tarjetero{
+  background-color: #A37B73;
+  gap: 1rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.finalcarta{
+  display: flex;
+  justify-content: space-between;
+}
+footer{
+  background-color:  #FAFAC6;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+.footer h3{
+text-align: center;
+font-size: 3rem;
+
+}
+.logitos{
+  display: flex;
+  gap: 2rem;
+}
+.icono img{
+  border-radius: 30px;
+  width: 3rem;
+  height: 3rem;
+  
+}
+.contenedorcontacto{
+  display: flex;
+  justify-content: center;
+}
+.contacto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+ 
+}
+.col-auto{
+  padding: 1rem;
+  display: flex;
+  justify-content: end;
+}
+.mainstat{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+ 
+}
+.divdetabla{
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%; 
+}
+
