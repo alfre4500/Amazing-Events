@@ -67,6 +67,47 @@ padding: 1rem;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+.detailed-card {
+  background-color: #A37B73;
+  min-width: 70vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.detailed-img, .detailed-descrip {
+  
+  background-color: #FAFAC6;
+  width: 40vw;
+  height: 60vh;
+  border-radius: 20px;
+}
+.detailed-descrip {
+  font-size: 1.5vh;
+  padding: 1rem;
+}
+.detailed-img {
+  background-image: url(./15kny.jpg) ;
+  background-position: center;
+  background-position-x: -5rem ;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width:768px) {
+  .detailed-descrip, .detailed-img {
+      width: 90vw;
+  }
+  .detailed-card {
+      padding: 0.5rem;
+  }
+  .detailed-descrip{
+      font-size: 12px;
+  }
+}
 .card-img-top{
   height: 100%;
 }
@@ -131,4 +172,7 @@ font-size: 3rem;
   display: flex;
   flex-direction: row;
   width: 80%;
+}
+.maindetails{
+  background-color: #A37B73;
 }

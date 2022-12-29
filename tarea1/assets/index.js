@@ -20,7 +20,7 @@ for (let index = 0; index < eventos.length; index++) {
     <p class="card-text"> ${element.description} </p>
     <div class="finalcarta">
       <p>Price $ ${element.price} </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="./details.html" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
   </div>`
