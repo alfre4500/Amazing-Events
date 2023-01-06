@@ -3,6 +3,8 @@
 }
 .ml{
   margin-left: auto;
+
+
 }
 .bg{
   background-color:#071E22;
@@ -21,15 +23,18 @@
     cursor:pointer;
     font-family:Arial;
     font-size:15px;
-    font-weight:bold;
     padding:6px 24px;
     text-decoration:none;
-    text-shadow:0px 1px 0px #3d768a;
+    text-shadow:2px 2px 0px #333333;
+    font-weight: bolder;
 }
 .boton:hover {
   color: white;
-  background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background:linear-gradient(to bottom, #090C08 5%, #E3170A 100%);
  
+}
+.navbar-toggler{
+  background-color: #D90368!important;
 }
 .botn:active {
   position:relative;
@@ -67,34 +72,40 @@ padding: 1rem;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.detailed-card {
+#detailed-card {
   background-color: #A37B73;
-  min-width: 70vw;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-width: 70vw;
+  min-height: fit-content;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 2rem;
   border-radius: 20px;
 }
+dl{
+  font-size: 2vh;
+  display: flex;
+ flex-direction: column;
+ margin: 0!important;
+  font-weight: bold;
+  text-align: left;
+  padding: 0.5rem;
+}
 
 .detailed-img, .detailed-descrip {
   
-  background-color: #FAFAC6;
+  
   width: 40vw;
-  height: 60vh;
   border-radius: 20px;
 }
-.detailed-descrip {
-  font-size: 1.5vh;
-  padding: 1rem;
+.detailed-descrip{
+  background-color: #FAFAC6;
+
 }
 .detailed-img {
-  background-image: url(./15kny.jpg) ;
-  background-position: center;
-  background-position-x: -5rem ;
-  background-size: cover;
-  background-repeat: no-repeat;
+  min-height: 60vh;
 }
 
 @media (max-width:768px) {
@@ -106,6 +117,7 @@ padding: 1rem;
   }
   .detailed-descrip{
       font-size: 12px;
+      
   }
 }
 .card-img-top{
