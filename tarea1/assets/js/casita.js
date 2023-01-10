@@ -1,9 +1,10 @@
 
+/* 
 let indexjs = document.getElementById("cards-section")
 const search = document.getElementById('search1')
 const check = document.getElementById("checkbox3")
 
-function craftCards(lista, descriptionCards){
+function craftCards(lista,contenedor){
     let imagenes = ""
     for (let propiedadEvents of lista){
             let template =  `
@@ -20,7 +21,11 @@ function craftCards(lista, descriptionCards){
                 </div> `
     imagenes =  imagenes + template
     }
-    return imagenes
+    return contenedor.innerHTML=imagenes
+}
+//funcion del rendertemplate
+function renderTemplate(template, ubicacion){
+    ubicacion.innerHTML = template
 }
 
 renderTemplate (craftCards(data.events), indexjs)
@@ -88,9 +93,10 @@ function filtroCruzado(evento){
         renderTemplate(craftCards(filterPerCheack), indexjs)
     }
 }
-//funcion del rendertemplate
-function renderTemplate(template, ubicacion){
-    ubicacion.innerHTML = template
-}
 
 filtroCruzado()
+ */
+
+
+//filtrado
+ /* const upComing = data.events.filter(infox => infox.date >= data.currentDate)  */

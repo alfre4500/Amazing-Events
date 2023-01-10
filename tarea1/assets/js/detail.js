@@ -1,26 +1,30 @@
 let cadenaParametroUrl = location.search;// para tomar la dire de las tarjetas
 let parametros = new URLSearchParams(cadenaParametroUrl); // para vincular la direcion que teniamos en las tarjetas x medio del get
 let idCard = parametros.get("idUrl");//nombre del id que usamos para vincular cada tarjeta 
-
 let contenedor = document.getElementById("detailed-card");//capturamos un elemento donde trabajaremos en el
 
-let propiedadEvents = data.events;
+ let propiedades;
 
-let cardEncontrada = propiedadEvents.find(
-  (propiedadEvents) => propiedadEvents._id == idCard
-);
+fetch("https://mindhub-xj03.onrender.com/api/amazing")
+.then( info => info.json())
+.then(info => {
+  propiedades=info
+  pintarCard(propiedades.events.find(tarjetita => tarjetita._id == idCard), contenedor)
+  
+})
+.catch(err => console.log(err))
 
-function pintarCard(propiedadEvents) {
+function pintarCard(propiedadEvents,contenedor) {
   contenedor.innerHTML = "";
   let asistencia = "";
   if(propiedadEvents.assistance){
   asistencia= `
     <dt>Assistance:</dt>
-                            <dd>${propiedadEvents.assistance}</dd>`
+    <dd>${propiedadEvents.assistance}</dd>`
   } else {
     asistencia= `
     <dt>Estimate:</dt>
-                            <dd>${propiedadEvents.estimate}</dd>`
+    <dd>${propiedadEvents.estimate}</dd>`
   }
   let template = `
     <img  class="detailed-img" src="${propiedadEvents.image}" alt="${propiedadEvents.name}">
@@ -30,7 +34,6 @@ function pintarCard(propiedadEvents) {
                         <dl>
                             <dt>Date:</dt>
                             <dd>${propiedadEvents.date}</dd>
-
                             <dt>Description:</dt>
                             <dd>${propiedadEvents.description}</dd>
                             <dt>Category:</dt>
@@ -57,5 +60,3 @@ function pintarCard(propiedadEvents) {
 }
 
 pintarCard(cardEncontrada);
-
-
