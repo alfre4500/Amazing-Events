@@ -11,7 +11,7 @@ fetch("https://mindhub-xj03.onrender.com/api/amazing")//nos devuelve una promesa
 .then(infotrabajable => {
   
   todalainfo = infotrabajable
-  check.innerHTML = generarCheckbox(todalainfo.events)
+   generarCheckbox(todalainfo.events, check)
   renderTemplate(craftCards(todalainfo.events), indexjs)
   check.addEventListener('change', filtroCruzado)
   search.addEventListener( 'input', filtroCruzado)
@@ -42,17 +42,17 @@ function craftCards(lista){
 }
   
 //Creacion de los checkbox
-    function generarCheckbox (lista){
+    function generarCheckbox (lista, container ){
         let categorias = new Set(lista.map( event =>event.category))
-        let template = ""
+       
         categorias.forEach(categoria =>{
-            template += `<div class="form-check d-flex">   
+            container.innerHTML += `<div class="form-check d-flex">   
             <label class="form-check-label">${categoria}
             <input class="form-check-input" type="checkbox" value="${categoria}">
             </label>
             </div>`
         })
-        return template
+      
     }
 
 
@@ -71,10 +71,10 @@ function checkFilter (touchs, categoriesList){
       return filters
   }
 }
-check.addEventListener('change', filtroCruzado)
+/* check.addEventListener('change', filtroCruzado) */
 // search
  
-search.addEventListener( 'input', filtroCruzado)
+/* search.addEventListener( 'input', filtroCruzado) */
 
 function searchFood(inputFind, categoriesList){
   const filterFood = categoriesList.filter(food => {
